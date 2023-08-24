@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ResponsiveDrawer from "./pages/Dashboard";
+import { BrowserRouter } from "react-router-dom";
+import  PieChart  from "./pages/PieChart";
+import { Geo } from "./pages/Geo";
+import Delete from "./methods/Delete";
+import Postadd from './methods/Postadd'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <BrowserRouter>
+<ResponsiveDrawer/>
+ <PieChart/> 
+ <Geo/>
+</BrowserRouter>
+{/* <Delete/>
+<Postadd/> */}
+   </>
   );
 }
 
